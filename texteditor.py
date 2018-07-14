@@ -1,11 +1,13 @@
+
 from tkinter import *
 import tkinter.scrolledtext as ScrolledText 
 import os
 from tkinter.filedialog import *
-import tkinter.messagebox	
+import tkinter.messagebox   
 
   
 root=Tk()
+root.geometry('800x400')
 root.iconbitmap(r"C:\Users\Ayush\Desktop\sample\icons\icons\favicon.ico")
 root.title("Text Editor")
 textArea=ScrolledText.ScrolledText(root,width=1990,height=1000)
@@ -15,10 +17,10 @@ menu=Menu(root)
 root.config(menu=menu)
 
 def new(event=None):
-	root.title("untitled")
-	global file_name
-	file_name=None
-	text.delete(1.0,END)
+    root.title("untitled")
+    global file_name
+    file_name=None
+    text.delete(1.0,END)
 
 
 
@@ -86,10 +88,10 @@ def paste():
         tkMessageBox.showerror("Errore","Gli appunti sono vuoti!")
 
 def undo():
-	if not stack:
-		return
-	previous = stack.pop()
-	previous.undo()
+    if not stack:
+        return
+    previous = stack.pop()
+    previous.undo()
 
 def help(event=None):
     tkinter.messagebox.showinfo(
@@ -197,8 +199,5 @@ aboutMenu.add_separator()
 aboutMenu.add_command(label="Exit",command=root.destroy)
 
 
+
 root.mainloop()
-
-
-
-
