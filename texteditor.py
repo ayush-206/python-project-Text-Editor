@@ -8,8 +8,8 @@ import tkinter.messagebox
 root=Tk()
 root.iconbitmap(r"C:\Users\Ayush\Desktop\sample\icons\icons\favicon.ico")
 root.title("Text Editor")
-textArea=ScrolledText.ScrolledText(root,width=2000,height=1000)
-text=Text(root,width=350,height=100)
+textArea=ScrolledText.ScrolledText(root,width=1990,height=1000)
+text=Text(root,width=360,height=100)
 text.grid()
 menu=Menu(root)
 root.config(menu=menu)
@@ -93,7 +93,7 @@ def undo():
 
 def help(event=None):
     tkinter.messagebox.showinfo(
-        "Help", "this is basic a notes making pad made by python",
+        "Help", "this is basically a note making pad made by python",
         icon='question')
 
 def get_line_numbers():
