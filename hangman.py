@@ -26,8 +26,6 @@ def start():
         else:
             break
 
-start()
-
 
 def change():
 
@@ -45,7 +43,7 @@ def change():
 def guessing():
     guess_taken = 1
 
-    while guess_taken < 10:
+    while guess_taken < 4:
 
 
         guess = input("Pick a letter\n").lower()
@@ -70,9 +68,9 @@ def guessing():
             else:
                 print("The letter is not in the word. Try Again!")
                 guess_taken += 1
-                if guess_taken == 10:
+                if guess_taken == 4:
                     print(" Sorry Mate, You lost :<! The secret word was",secretWord)
                     print("Game Over!")
-
+start()
 change()
 guessing()
